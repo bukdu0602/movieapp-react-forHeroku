@@ -1,0 +1,58 @@
+.top-bar {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 50px auto;
+    grid-template-areas: "logo btn"
+                         "nav  nav";
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+
+    h1 {
+        grid-area: logo;
+        margin: 0;
+        margin-left: 20px;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+    }
+    nav {
+        grid-area: nav;
+        display: none;
+        a {
+            padding-left: 20px;
+            line-height: 50px;
+            font-size: 1.2em;
+            display: block;
+            transition: background-color 0.5s ease;
+        }
+        a:hover, a:active, a:focus{
+            background-color: rgba(255,255,255, 0.3);
+        }
+    
+    }
+}
+
+.show .top-bar nav {
+    display: block;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-menu {
+    grid-area: btn;
+    justify-self: end;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+/*.top-bar nav a:hover,
+.top-bar nav a:active,
+.top-bar nav a:focus {
+    background-color: rgba(255,255,255, 0.3);
+}*/
